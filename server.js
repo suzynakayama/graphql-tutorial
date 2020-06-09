@@ -4,11 +4,11 @@ const schema = require("./schema");
 
 const app = express();
 
-app.unsubscribe(
+app.use(
   "/graphql",
   expressGraphQL({
     schema: schema,
-    
+    // enable the usage of graphiql
     graphiql: true,
   })
 );
